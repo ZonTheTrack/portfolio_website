@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Social Media Video Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="play"></i>
+                    </div>
+                    <span class="logo-text">VideoPortfolio</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('portfolio')" class="nav-link">Portfolio</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-nav" class="mobile-nav">
+                <nav class="mobile-nav-content">
+                    <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+                    <button onclick="scrollToSection('portfolio')" class="mobile-nav-link">Portfolio</button>
+                    <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+                    <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-element hero-bg-1"></div>
+            <div class="hero-bg-element hero-bg-2"></div>
+            <div class="hero-bg-element hero-bg-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="sparkles" class="sparkle-icon"></i>
+                <span>Creative Content Creator</span>
+                <i data-lucide="sparkles" class="sparkle-icon"></i>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="gradient-text">Viral Videos</span>
+                <br>
+                <span class="white-text">That Tell Stories</span>
+            </h1>
+
+            <p class="hero-description">
+                Welcome to my creative universe! Explore my portfolio of engaging social media content that captivates audiences across platforms.
+            </p>
+
+            <div class="hero-buttons">
+                <button onclick="scrollToSection('portfolio')" class="btn-primary">
+                    View My Work
+                </button>
+                <button onclick="scrollToSection('contact')" class="btn-secondary">
+                    Get In Touch
+                </button>
+            </div>
+
+            <div class="scroll-indicator" onclick="scrollToSection('portfolio')">
+                <i data-lucide="arrow-down"></i>
+            </div>
+        </div>
+
+        <!-- Floating Icons -->
+        <div class="floating-icon floating-icon-1">YT</div>
+        <div class="floating-icon floating-icon-2">IG</div>
+        <div class="floating-icon floating-icon-3">TT</div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">My Video Portfolio</span>
+                </h2>
+                <p class="section-description">
+                    Discover my creative journey through viral content that resonates with millions
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-label">
+                    <i data-lucide="filter"></i>
+                    <span>Filter by:</span>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="tiktok">TikTok</button>
+                    <button class="filter-btn" data-category="instagram">Instagram</button>
+                    <button class="filter-btn" data-category="youtube">YouTube</button>
+                    <button class="filter-btn" data-category="reels">Reels</button>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div id="video-grid" class="video-grid">
+                <!-- Videos will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left Column -->
+                <div class="about-content">
+                    <h2 class="section-title">
+                        <span class="gradient-text">About Me</span>
+                    </h2>
+                    <div class="about-text">
+                        <p>
+                            Hi! I'm a passionate content creator who specializes in crafting viral social media videos 
+                            that captivate audiences across platforms. With over 5 years of experience in digital 
+                            storytelling, I've mastered the art of creating engaging content that resonates.
+                        </p>
+                        <p>
+                            My journey began with a simple love for storytelling and has evolved into a full-fledged 
+                            creative studio where I help brands and individuals amplify their voice through the power 
+                            of video content.
+                        </p>
+                        <p>
+                            From trending TikTok dances to thought-provoking Instagram reels, I bring creativity, 
+                            authenticity, and strategic thinking to every piece of content I create.
+                        </p>
+                    </div>
+
+                    <div class="skills">
+                        <div class="skill-tag">
+                            <i data-lucide="zap"></i>
+                            <span>Creative Direction</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="trending-up"></i>
+                            <span>Growth Strategy</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="award"></i>
+                            <span>Brand Partnerships</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="about-stats">
+                    <div class="stats-card">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i data-lucide="users"></i>
+                                </div>
+                                <div class="stat-value">2.5M+</div>
+                                <div class="stat-label">Total Followers</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i data-lucide="eye"></i>
+                                </div>
+                                <div class="stat-value">150M+</div>
+                                <div class="stat-label">Total Views</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Viral Videos</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i data-lucide="trending-up"></i>
+                                </div>
+                                <div class="stat-value">8.5%</div>
+                                <div class="stat-label">Avg. Engagement</div>
+                            </div>
+                        </div>
+
+                        <div class="achievement">
+                            <h4>Recent Achievement</h4>
+                            <p>
+                                My latest TikTok video reached 5M+ views in just 48 hours, making it to the 
+                                trending page and gaining 500K+ new followers!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="floating-emoji floating-emoji-1">🔥</div>
+                    <div class="floating-emoji floating-emoji-2">✨</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Let's Create Together</span>
+                </h2>
+                <p class="section-description">
+                    Ready to bring your vision to life? Let's collaborate and create something amazing!
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">hello@videoportfolio.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">Los Angeles, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <h3>Follow My Journey</h3>
+                        <div class="social-grid">
+                            <a href="#" class="social-link instagram">
+                                <i data-lucide="instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link youtube">
+                                <i data-lucide="youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i data-lucide="twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link tiktok">
+                                <i data-lucide="message-circle"></i>
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+                        <div class="social-note">
+                            <p>Follow me for daily content updates and behind-the-scenes looks at my creative process!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="play"></i>
+                        </div>
+                        <span class="logo-text">VideoPortfolio</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating viral content that inspires, entertains, and connects with audiences worldwide. 
+                        Join my journey and let's make something amazing together.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <div class="footer-nav">
+                        <button onclick="scrollToSection('home')">Home</button>
+                        <button onclick="scrollToSection('portfolio')">Portfolio</button>
+                        <button onclick="scrollToSection('about')">About</button>
+                        <button onclick="scrollToSection('contact')">Contact</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <span>Made with</span>
+                    <i data-lucide="heart" class="heart-icon"></i>
+                    <span>© 2024 VideoPortfolio. All rights reserved.</span>
+                </div>
+                
+                <button onclick="scrollToTop()" class="scroll-top-btn">
+                    <i data-lucide="arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <span id="modal-category" class="category-badge"></span>
+                    <h3 id="modal-title"></h3>
+                </div>
+                <button id="close-modal" class="close-btn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-video">
+                    <img id="modal-thumbnail" src="" alt="">
+                    <div class="play-overlay">
+                        <div class="play-button">
+                            <div class="play-triangle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-details">
+                    <div class="modal-description">
+                        <h4 id="modal-video-title"></h4>
+                        <p id="modal-video-description"></p>
+                    </div>
+
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <div class="stat-header">
+                                <i data-lucide="eye"></i>
+                                <span>Views</span>
+                            </div>
+                            <p id="modal-views" class="stat-number"></p>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-header">
+                                <i data-lucide="heart"></i>
+                                <span>Likes</span>
+                            </div>
+                            <p id="modal-likes" class="stat-number"></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-meta">
+                        <div class="meta-info">
+                            <span>Published: <span id="modal-date"></span></span>
+                            <span>Duration: <span id="modal-duration"></span></span>
+                        </div>
+                        <div id="modal-tags" class="tags"></div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn-primary btn-full">Watch Full Video</button>
+                        <button class="action-btn">
+                            <i data-lucide="share-2"></i>
+                        </button>
+                        <button class="action-btn">
+                            <i data-lucide="download"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
